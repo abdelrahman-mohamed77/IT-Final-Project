@@ -1,7 +1,7 @@
 :root {
   --background-color: #dad7cd;
-  --text-color1: #f0f8ff;
-  --text-color2: black;
+  --text-color2: #f0f8ff;
+  --text-color1: black;
   --headr-bar-color: #3a5a45;
   --hover-color: #578164;
   --hover-shadow-color: #57816473;
@@ -35,12 +35,24 @@ li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+    width: 90%;
+  margin-left: 5%;
+  border-radius: 15px;
+  margin-top: 15px;
+  background-image: linear-gradient(to right , #578164 ,#3a5a45,#334b3c );
+  justify-content: space-between;
+  gap: 8vw;
+  padding: 0 2rem;
 }
 .logo {
   padding: 1.1rem;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bolder;
-  color: var(--text-color1);
+  color: var(--text-color2);
+  justify-items: flex-start;
+  flex: 1;
+  text-align: canter;
+
 }
 .nav-list {
   color: var(--text-color2);
@@ -48,17 +60,47 @@ li {
   flex-wrap: wrap;
   align-items: center;
   margin-right: auto;
+  justify-items: center;
+}
+.home{
+  color: var(--text-color2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: auto;
+  justify-items: center;
+  margin-right: 8vw;
 }
 .list-item {
   padding: 2rem;
   font-size: large;
   font-weight: bold;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .list-item:hover {
   text-decoration: underline;
   text-underline-offset: 20px;
   color: var(--text-color1);
+}
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    flex: 1;
+    margin-right: 4vw;
+}
+.icons svg{
+   fill: #edf2f4;
+    transition: all 0.5s ;
+
+}
+.icons svg:hover{
+    transition: 0.5s;
+    fill: #000000; 
+}
+.icons a {
+    text-decoration: none;
+
 }
 /*theme button*/
 #theme-switch {
@@ -72,9 +114,9 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   top: 10px;
   right: 20px;
+  flex-shrink: 0;
 }
 #theme-switch img {
   fill: var(--background-color);
