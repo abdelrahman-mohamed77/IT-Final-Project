@@ -16,11 +16,90 @@
         <li><a class="list-item" href="#">Shop</a></li>
         <li><a class="list-item" href="#">About us</a></li>
         <li><a class="list-item" href="#">Help</a></li>
-        <button id="theme-switch">
-          <img src="image/light_mod.png" />
-          <img src="image/dark_mod.png" />
-        </button>
       </ul>
+      <button id="theme-switch">
+        <img src="image/light_mod.png" />
+        <img src="image/dark_mod.png" />
+      </button>
     </nav>
+    <main class="cart">
+      <div class="cart-left">
+        <div class="table-header">
+          <span class="col-prod">PRODUCT</span>
+          <span class="col-price">PRICE</span>
+          <span class="col-qty">QUANTITY</span>
+          <span class="col-total">TOTAL</span>
+        </div>
+        <hr />
+
+        <div class="product-row">
+          <div class="product-info col-prod">
+            <img src="image/monkey.png" alt="monkey" class="cart-img" />
+            <div class="product-details">
+              <p class="bn">MNKY-V1-GOLD</p>
+              <p class="variant">Gold / Extra Fluffy <span>✎</span></p>
+              <p class="brand">City Guys Originals</p>
+            </div>
+          </div>
+
+          <div class="item-price">
+            <p><b>1,000,000$</b></p>
+          </div>
+
+          <div class="item-qty">
+            <div class="qty-selector">
+              <button>−</button>
+              <input type="text" value="1" />
+              <button>+</button>
+            </div>
+          </div>
+
+          <div class="col-total">
+            <p><b>1,000,000$</b></p>
+          </div>
+
+          <div class="remove-item">×</div>
+        </div>
+
+        <div class="cart-footer-extras">
+          <p class="secure-text">✔ Secure Shopping Guarantee</p>
+          <div class="payment-methods">
+            <div class="pay-placeholder">
+              <img width="25px" height="25px" src="image/visa.png" alt="visa" />
+              VISA
+            </div>
+            <div class="pay-placeholder">
+              <img width="25px" height="25px" src="image/cash.png" alt="cash" />
+              CASH
+            </div>
+          </div>
+          <div class="shipping-banner">Free shipping on the first 3 orders</div>
+        </div>
+      </div>
+
+      <aside class="cart-right">
+        <div class="summary-box">
+          <h2>ORDER SUMMARY</h2>
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span>1,000,000$</span>
+          </div>
+
+          <div class="coupon-box">
+            <label>Coupon Code</label>
+            <input type="text" placeholder="Enter Coupon Code" />
+            <p>Coupon code will be applied on the checkout page</p>
+          </div>
+
+          <div class="summary-line total-line">
+            <span>TOTAL:</span>
+            <span class="grand-total">1,000,000$</span>
+          </div>
+
+          <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+          <button class="continue-btn">CONTINUE SHOPPING</button>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>

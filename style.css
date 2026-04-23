@@ -3,8 +3,9 @@
   --text-color1: #f0f8ff;
   --text-color2: black;
   --headr-bar-color: #3a5a45;
-  --hover-color: #578164;
+  --hover-color: #48b169;
   --hover-shadow-color: #57816473;
+  --cart-background-color: #c0cfb6;
 }
 .dark-mod {
   --background-color: #504e49;
@@ -13,12 +14,14 @@
   --headr-bar-color: #0f1414;
   --hover-color: #000000;
   --hover-shadow-color: #6e9b7a40;
+  --cart-background-color: #405234;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/*header*/
 body {
   font-family: sans-serif;
   background-color: var(--background-color);
@@ -72,7 +75,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   top: 10px;
   right: 20px;
 }
@@ -87,4 +89,181 @@ li {
 }
 .dark-mod #theme-switch img:last-child {
   display: block;
+}
+/*cart main*/
+.cart {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.cart-left {
+  flex: 3;
+  min-width: 0;
+  background: var(--cart-background-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+.table-header {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+  color: var(--text-color2);
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--text-color2);
+  margin: 10px 0 20px 0;
+}
+.col-prod {
+  flex: 3;
+}
+.col-price {
+  flex: 1;
+  text-align: center;
+}
+.col-qty {
+  flex: 1;
+  text-align: center;
+}
+.col-total {
+  flex: 1;
+  text-align: center;
+}
+.product-row {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--text-color2);
+}
+.cart-img {
+  width: 100px;
+  height: 120px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.product-info {
+  display: flex;
+  align-items: center;
+}
+.bn {
+  font-weight: bold;
+  font-size: 14px;
+}
+.variant {
+  font-size: 13px;
+  color: var(--cart-background-color);
+  margin: 4px 0;
+}
+.brand {
+  font-size: 12px;
+  color: var(--text-color1);
+}
+.qty-selector {
+  display: inline-flex;
+  border: 1px solid var(--background-color);
+  background: white;
+}
+.qty-selector button {
+  width: 30px;
+  border: none;
+  background: var(--hover-color);
+  cursor: pointer;
+}
+.qty-selector input {
+  width: 35px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: none;
+  border-bottom: none;
+}
+.remove-item {
+  position: relative;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-color2);
+}
+.shipping-banner {
+  background: var(--headr-bar-color);
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.cart-right {
+  flex: 1;
+  min-width: 320px;
+  background: var(--cart-background-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.summary-box h2 {
+  font-size: 18px;
+  border-bottom: 3px solid var(--text-color2);
+  border-radius: 2px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.coupon-box {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 25px 0;
+}
+.coupon-box input {
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid var(--text-color1);
+}
+.coupon-box p {
+  font-size: 11px;
+  color: var(--background-color);
+}
+
+.total-line {
+  border-top: 1px solid var(--text-color2);
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.checkout-btn,
+.continue-btn {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  background: var(--hover-shadow-color);
+  color: white;
+  transition: all 0.2s ease;
+}
+.checkout-btn:hover,
+.continue-btn:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
