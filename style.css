@@ -64,33 +64,30 @@ li {
 .nav-bar {
   background: var(--nav-gradient);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin-left: 5%;
+  margin: 15px auto 0;
   border-radius: 15px;
-  margin-top: 15px;
-  justify-content: space-between;
-  gap: 8vw;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
 }
 .logo {
-  padding: 1.1rem;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bolder;
   color: var(--text-secondary);
-  justify-items: flex-start;
   flex: 1;
-  text-align: canter;
 }
 .nav-list {
-  color: var(--text-secondary);
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  margin-right: auto;
-  justify-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex: 2;
+  justify-content: center;
 }
+
 .home {
   color: var(--text-primary);
   display: flex;
@@ -101,29 +98,30 @@ li {
   margin-right: 8vw;
 }
 .list-item {
-  padding: 2rem;
-  font-size: large;
+  text-decoration: none;
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   font-weight: bold;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .list-item:hover {
-  text-decoration: underline;
-  text-underline-offset: 20px;
-  color: var(--text-muted-2);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
 }
 .icons {
   display: flex;
   align-items: center;
-  gap: 3vw;
+  justify-content: flex-end;
+  gap: 1.5rem;
   flex: 1;
-  margin-right: 4vw;
 }
 .icons svg {
-  fill: var(--bg-main);
-  transition: all 0.5s;
+  fill: var(--text-secondary);
+  transition: transform 0.3s;
 }
 .icons svg:hover {
-  transition: 0.5s;
+  transform: scale(1.1);
   fill: var(--text-secondary);
 }
 .icons a {
