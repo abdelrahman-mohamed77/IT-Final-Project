@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Guys</title>
+    <link rel="stylesheet" href="category-style.css" />
+    <link rel="stylesheet" href="home-style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="">
+    <nav class="nav-bar">
+      <div class="logo">City Guys</div>
+      <ul class="nav-list">
+      <div class="home">
+          <li><a class="list-item" href="index.html">Home</a></li>
+          <li><a class="list-item" id="active" href="category.html">Shop</a></li>
+          <li><a class="list-item" href="#">About us</a></li>
+          <li><a class="list-item" href="help-page.html">Help</a></li>
+      </div> 
+      <div class="icons">
+          <a href="#" class="bar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="24"  height="24">
+                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+              </svg>
+          </a>
+          <a href="cart.html" class="cart">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="24"  height="24">
+                <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+              </svg>
+          </a>
+          <a href="#" class="user">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="24"  height="24">
+                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+              </svg>
+          </a>
+          <a href="#" class="search">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="24"  height="24">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+              </svg>
+              <a id="faq-link" href="faq.html" target="_blank">FAQ</a>
+          </a>
+      </div>
+        <button id="theme-switch">
+          <img src="image/light_mod.png" />
+          <img src="image/dark_mod.png" />
+        </button>
+      </ul>
+    </nav>
+
+    <!-- Category Section -->
+    <section class="category-section">
+      
+      <div class="category-container">
+        <div class="category">
+          <h2>Categories</h2>
+          <a href="#" class="filter-btn" data-filter="shirts">Shirts</a>
+          <a href="#" class="filter-btn" data-filter="pants">Pants</a>
+          <a href="#" class="filter-btn" data-filter="shoes">Shoes</a>
+        </div>
+
+        <div class="price">
+          <h2>Price</h2>
+          <a href="#" class="filter-btn" data-filter="0-50">$0 - $50</a>
+          <a href="#" class="filter-btn" data-filter="50-100">$50 - $100</a>
+          <a href="#" class="filter-btn" data-filter="100-200">$100 - $200</a>
+        </div>
+
+        <div class="size">
+          <h2>Sizes</h2>
+          <a href="#" class="filter-btn" data-filter="XS">XS</a>
+          <a href="#" class="filter-btn" data-filter="S">S</a>
+          <a href="#" class="filter-btn" data-filter="M">M</a>
+          <a href="#" class="filter-btn" data-filter="L">L</a>
+          <a href="#" class="filter-btn" data-filter="XL">XL</a>
+        </div>
+      </div>
+
+        
+        
+        
+        
+      <div class="product-container">
+        
+        <!-- Shirts Category -->
+        <div class="product">
+          <div class="product-card"  data-category="shirts" data-price="0-50" data-size="XS">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/9e959e0e-bbf9-456c-92fa-a0dbc7c2c4e1.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/ef6e2bdc-33d2-4bce-8afd-75a6a3a5cc38.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Urban Polo Shirt</h3>
+            <div class ="product-info">
+              <p>$34.99</p>
+              <a href="#">add to cart</a>
+            </div>
+            
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="50-100" data-size="M">
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/9239db13-a48f-4f16-b3bc-efdd5d96fdf6.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/e2c436c4-ba4c-4120-9011-656f3d98cd97.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Milano Italia Polo</h3>
+            <div class ="product-info">
+              <p>$69.99</p>
+              <a href="#">add to cart</a>
+            </div>
+
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="100-200" data-size="XL">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fmket/ae66ecbda1f6336f7e80e83178d8a203.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/b99fdfba-bd8c-49c9-9981-934650e80a9b.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Tactical Mesh Tee</h3>
+            <div class ="product-info">
+              <p>$124.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="50-100" data-size="L">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/8abfd7036b834da198bbcda2ff4af24b-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/551b1038e0ab445cb377e3c852b68dbf-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Classic Plaid Polo</h3>
+            <div class ="product-info">
+              <p>$79.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="0-50" data-size="XS">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/159e43ec-a271-424e-9019-10c2a5d38b84.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/5fb04d24-b8b9-4031-806e-2ea1c8b8ed09.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Abstract Cyber Tee</h3>
+            <div class ="product-info">
+              <p>$44.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="0-50" data-size="S">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fmket/6fca52050e4b1459d3b1765cbe22ad20.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/1516e307-51ac-4f34-82fb-21194cb34554.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Midnight Stripe Polo</h3>
+            <div class ="product-info">
+              <p>$49.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="0-50" data-size="S">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/e7c269211c97430293808d11886e7f01-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/ca32e08232b748ad849fa752563e072f-goods.jpeg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Aviator Graphic Tee</h3>
+            <div class ="product-info">
+              <p>$34.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="50-100" data-size="M">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/fe7b8163-6230-436b-9615-1e943b1d380c.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/845128d8-b0b4-4b4d-898c-cc342e215b59.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Silver Waffle Tee</h3>
+            <div class ="product-info">
+              <p>$59.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="50-100" data-size="M">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/f8dc8536-c69a-42aa-ba99-b530022f1741.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/697e2c26-123b-464a-afe6-90fbe195efe6.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Floral Summer Shirt</h3>
+            <div class ="product-info">
+              <p>$54.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card" data-category="shirts" data-price="50-100" data-size="L">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/9f348cc3-5cc6-43a9-b27c-c89bf50e33e6.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/fc2f4817-d0e0-4b6a-be9c-5f99dc20d11b.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>White Feather Longsleeve</h3>
+            <div class ="product-info">
+              <p>$64.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="100-200" data-size="XL">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/66702742-0767-46c3-af68-6a26a6959222.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/83ddd76f-5765-405c-925d-b21386025cfa.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Sand Stripe Polo</h3>
+            <div class ="product-info">
+              <p>$119.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shirts" data-price="100-200" data-size="XL">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/3ac7035f-7981-4e3d-bebe-ed5c88bcbe6d.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/12979e3b-2975-4336-b547-75d1fbcb5a35.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Gingham Check Polo</h3>
+            <div class ="product-info">
+              <p>$139.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+        
+        
+
+
+
+
+
+
+
+
+        <!-- Pants Category -->
+        
+          <div class="product-card" data-category="pants" data-price="0-50" data-size="XS">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/63f5b1eb-07ad-4db8-945a-007c4b522786.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/e1fb363e-101f-4099-a2ff-df90da7fdc36.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Sky Blue Relaxed Jeans</h3>
+            <div class ="product-info">
+              <p>$44.99</p>
+              <a href="#">add to cart</a>
+            </div>
+            
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="50-100" data-size="L">
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fmket/e1ffd98297b7ccee8a1789e6b8589b74.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/823dba89-9af9-4ec8-a403-08b4c5b6329d.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Cream Chino Pants</h3>
+            <div class ="product-info">
+              <p>$59.99</p>
+              <a href="#">add to cart</a>
+            </div>
+
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="50-100" data-size="XL">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/5cbfadb9-067f-465f-9264-e5fc6128e7c2.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/7cbc3499-5d79-40cc-a4f2-afa309926049.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Deep Sea Slim Jeans</h3>
+            <div class ="product-info">
+              <p>$89.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="100-200" data-size="S">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/algo_check/auto/ed0a936265d14beeed6e6fd6f63778571755672442059.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/65932c7f-dac9-4859-b951-ea3dd4bbc796.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Charcoal Plaid Trousers</h3>
+            <div class ="product-info">
+              <p>$149.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card" data-category="pants" data-price="0-50" data-size="S">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/8c913b04-57f8-42f9-9053-44548f5106b7.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/6758ca45-efe9-4a01-b935-15106594adc4.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Slate Textured Trousers</h3>
+            <div class ="product-info">
+              <p>$49.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="0-50" data-size="XS">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/7c201b9a-fa94-44ac-9e32-154af51e06c5.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/7727385e-f201-4d33-baf8-d1ff53181096.jpg?imageView2/2/w/800/q/70/format/avif" />
+            </div>
+            <h3>Pure White Chinos</h3>
+            <div class ="product-info">
+              <p>$39.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="100-200" data-size="M">
+
+            <div class="imge-wrap" >
+              <img src="https://img.kwcdn.com/product/fancy/3a45e5df-cd12-4e40-b843-bd972a0b7dbe.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/9261e13d-4b9e-4eb4-8240-328aa77a0137.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Urban Grey Slacks</h3>
+            <div class ="product-info">
+              <p>$129.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="100-200" data-size="L">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/08b507bb-0710-4672-a388-3c4bb8c34afa.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/44132a22-6fa2-4eeb-a626-4b352a8fb8c9.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Olive Garden Pants</h3>
+            <div class ="product-info">
+              <p>$159.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="50-100" data-size="M">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/0e02e2aa-2361-4306-8159-0316afe08e4d.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/eb73f945-e308-46ef-9429-e7e3bfd70393.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Light Blue Cargo Jeans</h3>
+            <div class ="product-info">
+              <p>$84.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="0-50" data-size="L">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/155b4568-8dc7-47ad-8c9a-f346df6692ae.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/0e35fcb6-5c97-4b5b-9539-905f60a87aca.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Earth Brown Denim</h3>
+            <div class ="product-info">
+              <p>$49.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="100-200" data-size="XL">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/66c90a58-6ca2-486b-8030-c2528a2b8b3e.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/c3e99974-309d-4954-9427-e16495b5d04c.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Camel Formal Pants</h3>
+            <div class ="product-info">
+              <p>$114.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="pants" data-price="100-200" data-size="S">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/5a565d5f-85c3-4e84-ac59-8607d0a7a41a.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/8451c3b8-3359-486e-9364-291a32a4dc04.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Night Grid Trousers</h3>
+            <div class ="product-info">
+              <p>$129.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+        
+        
+
+
+
+
+
+        <!-- Shoes Category -->
+
+          <div class="product-card"  data-category="shoes" data-price="50-100">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/462ddae6-9b26-46f7-a5ed-c62c99a51e55.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/54f8a1bd-8f99-45ae-b926-3106976941e1.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Alpine White Runners</h3>
+            <div class ="product-info">
+              <p>$89.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="0-50">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/654b353292a14327946579b9ee798825-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/938cb1ac1a4e4d208dafff2097173ce8-goods.jpeg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Ivory Leather Sneakers</h3>
+            <div class ="product-info">
+              <p>$44.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="100-200">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/ed3d5e5e-1999-4ec7-a0ba-2ab669b46019.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/4744b7da-a299-4e2b-864d-9a2fde8b721f.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Urban Creams Walkers</h3>
+            <div class ="product-info">
+              <p>$129.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="100-200">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/4509be99f5e84df687ca08d347577717-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/9fa43b9708614e89aa8f61d755d35629-goods.jpeg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Speed Stripe Sport</h3>
+            <div class ="product-info">
+              <p>$159.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="0-50" data-size="XS">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/c01c2f9bf1de466280ff6d0075d6a5ac-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/5607355765674774859fd7d369291723-goods.jpeg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Arctic Edge Runner</h3>
+            <div class ="product-info">
+              <p>$49.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="50-100">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/open/8a5beea3796d40dcae50a982d2dd4a64-goods.jpeg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/open/7f2eb70846a646c9a6fd8e3e956b59c1-goods.jpeg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Retro Stripe Sneaker</h3>
+            <div class ="product-info">
+              <p>$79.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="100-200">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/algo_check/auto/540d5b396cec534b90a36f23224acffe_1722943177565.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/algo_check/auto/00b2902993bc0c10e0681e17c8aa0418_1722943177855.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Nova Pure Walk</h3>
+            <div class ="product-info">
+              <p>$119.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+          <div class="product-card"  data-category="shoes" data-price="100-200">
+
+            <div class="imge-wrap">
+              <img src="https://img.kwcdn.com/product/fancy/4a64229c-8400-43f8-9030-b811818a8135.jpg?imageView2/2/w/800/q/70/format/avif" />
+              <img src="https://img.kwcdn.com/product/fancy/c5d1eea5-a4a2-4460-b6d2-26d52b632f76.jpg?imageView2/2/w/800/q/70/format/avif">
+            </div>
+            <h3>Sage Street Glide</h3>
+            <div class ="product-info">
+              <p>$149.99</p>
+              <a href="#">add to cart</a>
+            </div>
+          </div>
+
+        
+        
+        </div>
+      </div>
+    </section>
+
+     <footer>
+      <div class="footer-row">
+        <div class="col">
+          <h2 class="footer-logo">City Guys</h2>
+          <p>
+            Join the movement. From limited drops to everyday staples, City Guys
+            is your go-to for contemporary street fashion.
+          </p>
+        </div>
+
+        <div class="col">
+          <h3>
+            Showroom
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>Mansor Road</p>
+          <p>Helwan, Cairo, Egypt</p>
+          <p class="footer-email">support@cityguys.com</p>
+          <h4>+20 10 1234 5678</h4>
+        </div>
+
+        <div class="col">
+          <h3>
+            Links
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href=#>About Us</a></li>
+            <li><a href="help-page.html">Help</a></li>
+            <li><a href="faq.html" target="_blank">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>
+            Newsletter
+            <div class="underline"><span></span></div>
+          </h3>
+          <form class="newsletter-form">
+            <span class="mail-icon">✉</span>
+            <input type="email" placeholder="Enter your email id" required />
+            <button type="submit">➔</button>
+          </form>
+          <div class="social-icons">
+            
+            <div class="social-circle">
+              <a href=""><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+            </div>
+
+            <div class="social-circle" class="whats-icon">
+              <a href=""><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+            </div>
+
+            <div class="social-circle" class="youtube-icon">
+              <a href=""><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr class="footer-line" />
+      <p class="copyright">
+        All rights reserved © 2026 - Helwan IT project student team <br>
+        @omar-rady @abdelrahman-osman @abdelrahman-mahmoud @omar-darwesh <br>
+        @omar-elkordi @abdallah-mma @ahmed-alaa
+      </p>
+    </footer>
+      
+
+  </body>
+</html>
