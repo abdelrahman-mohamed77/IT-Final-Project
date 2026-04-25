@@ -40,11 +40,26 @@ filterButtons.forEach(function(button) {
       const cardPrice = card.getAttribute('data-price') || "";
       if (cardCategory === filterValue || cardSize === filterValue || cardPrice === filterValue) {
         card.style.display = 'flex';
-        card.style.opacity = '0';
-        setTimeout(() => { card.style.opacity = '1'; }, 150);
       } else {
         card.style.display = 'none'; 
       }
     });
   });
+});
+
+
+      /*home filter links*/
+
+window.addEventListener('load', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterValue = urlParams.get('filter');
+
+    if (filterValue) {
+  
+        const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterValue}"]`);
+        
+        if (targetBtn) {
+            targetBtn.click(); 
+        }
+    }
 });
