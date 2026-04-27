@@ -102,11 +102,12 @@ li {
   padding: 2rem;
   font-size: large;
   font-weight: bold;
+  display: inline-block;
   transition: all 0.5s ease;
 }
+
 .list-item:hover {
-  text-decoration: underline;
-  text-underline-offset: 20px;
+  transform: translateY(-4px);
   color: var(--text-color3);
 }
 .icons {
@@ -126,6 +127,7 @@ li {
 }
 .icons svg:hover {
   transition: 0.5s;
+  transform: translateY(-4px);
   fill: var(--text-color3) !important;
 }
 .icons a {
