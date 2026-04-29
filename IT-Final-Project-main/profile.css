@@ -57,7 +57,7 @@ body {
 body, .card, .nav-bar, .hero {
   transition: 0.4s;
 }
-
+/* header css */
 a {
   text-decoration: none;
   color: inherit;
@@ -246,8 +246,6 @@ li {
   font-size: 18px;
   font-weight: bold;
 }
-
-
 /* زرار continue shopping */
 .continue-btn {
   margin-top: 20px;
@@ -264,7 +262,48 @@ li {
   align-self: center;
   margin-top: auto;
 }
+/* زرار ال scroll */
+#up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(to right, #578164, #3a5a45);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
 
+#up:hover {
+  transform: scale(1.1);
+  background: black;
+}
+
+#up.show {
+  display: block;
+  opacity: 1;
+}
+/* زرار اظهار ال password */
+#show-hide {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  background: #3a5a45;
+  color: white;
+  cursor: pointer;
+}
+
+#show-hide:hover {
+  background: black;
+}
+/* footer css */
 footer {
   width: 100%;
   background: var(--nav-gradient);
@@ -374,7 +413,7 @@ footer {
 .copyright {
   text-align: center;
 }
-
+/* زرار ال dark mode*/
 /*theme button*/
 #theme-switch {
   height: 50px;
@@ -403,49 +442,6 @@ footer {
 .dark-mod #theme-switch img:last-child {
   display: block;
 }
-
-/* زرار ال scroll */
-#up {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  background: linear-gradient(to right, #578164, #3a5a45);
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  display: none; 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-
-#up:hover {
-  transform: scale(1.1);
-  background: black;
-}
-
-#up.show {
-  display: block;
-  opacity: 1;
-}
-/* زرار اظهار ال password */
-#show-hide {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  border: none;
-  background: #3a5a45;
-  color: white;
-  cursor: pointer;
-}
-
-#show-hide:hover {
-  background: black;
-}
-
 /*profile responsive */
 @media (max-width: 768px) {
   #topBtn {
