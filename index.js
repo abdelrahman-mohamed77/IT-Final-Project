@@ -80,6 +80,11 @@ signUpForm.addEventListener('submit', (e) => {
 
     // save who is logged in right now
     localStorage.setItem('loggedIn', username);
+    
+    // تخزين ال username & email & password
+    localStorage.setItem("username", username);
+    localStorage.setItem("email", email);      
+    localStorage.setItem("password", password);
 
     // go to home page
     window.location.href = 'home.html';
