@@ -1,0 +1,222 @@
+:root {
+  --background-color: #dad7cd;
+  --cart-background-color: #adc7a988;
+  --text-color2: #f0f8ff;
+  --text-color1: black;
+  --text-color3: #083a18;
+  --text-color4: gray;
+  --headr-bar-color: #3a5a45;
+  --helper-color: #578164;
+  --helper-color-1: #57816473;
+  --nav-color: linear-gradient(
+    to right,
+    var(--helper-color),
+    var(--headr-bar-color),
+    var(--helper-color-1)
+  );
+}
+.dark-mod {
+  --background-color: #121212;
+  --cart-background-color: #2b2e3188;
+  --text-color1: #e0e7e0;
+  --text-color2: #ffffff;
+  --text-color3: #22ee63;
+  --text-color4: rgb(221, 221, 221);
+  --headr-bar-color: #0f1414;
+  --helper-color: #000000;
+  --helper-color-1: #242424;
+  --nav-color: linear-gradient(
+    to right,
+    var(--helper-color),
+    var(--headr-bar-color),
+    var(--helper-color-1)
+  );
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: var(--text-color1);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+/* ── Them switch button ── */
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%; /* Makes it a perfect circle */
+  background-color: var(--helper-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 40px 0 0 0;
+  flex-shrink: 0;
+}
+#theme-switch img {
+  fill: var(--background-color);
+}
+#theme-switch img:last-child {
+  display: none;
+}
+.dark-mod #theme-switch img:first-child {
+  display: none;
+}
+.dark-mod #theme-switch img:last-child {
+  display: block;
+}
+/* ── Flip container ── */
+#flip-container {
+  perspective: 1200px;
+  width: clamp(300px, 80%, 380px);
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+#flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+#flip-container.flipped #flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: var(--cart-background-color);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 9px var(--text-color1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* keep container tall enough for the taller side (signup has 4 fields) */
+#flip-container.flipped #flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* ── Typography ── */
+#title {
+  color: var(--text-color1);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--text-color1);
+  font-size: 16px;
+  padding: 2px;
+  margin: 2px;
+}
+
+/* ── Input groups ── */
+#input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.field {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.field::placeholder {
+  color: black;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.field:focus {
+  border-color: var(--text-color3);
+  background-color: #fff;
+  outline: none;
+  color: var(--text-color3);
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+.field:focus::placeholder {
+  color: transparent;
+}
+
+/* ── Button ── */
+#login-btn {
+  background-color: var(--helper-color);
+  color: var(--text-color2);
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2px solid var(--text-color3);
+  box-shadow: 0 0 16px var(--text-color1);
+  cursor: pointer;
+  margin: 20px;
+  padding: 10px;
+  min-width: 100px;
+  transition: 0.2s;
+}
+
+#login-btn:hover {
+  background-color: var(--text-color3);
+  color: var(--text-color2);
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+/* ── Icons ── */
+.icons {
+  color: var(--text-color1);
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.icons:hover {
+  scale: 1.2;
+  transition: 0.2s;
+}
+
+/* ── Links ── */
+#sign-up-link {
+  color: var(--text-color3);
+  cursor: pointer;
+}
+.incorrect.field {
+  border-color: rgb(196, 84, 84);
+}
+#error-message,
+#error-message-signup {
+  color: rgb(196, 84, 84);
+  font-size: 14px;
+  min-height: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}

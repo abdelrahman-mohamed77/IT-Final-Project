@@ -38,6 +38,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
 #active {
   border-bottom: 2px solid white;
   border-width: fit-content;
