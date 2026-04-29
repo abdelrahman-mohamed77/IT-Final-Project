@@ -57,7 +57,17 @@ body {
 body, .card, .nav-bar, .hero {
   transition: 0.4s;
 }
+
 /* header css */
+.nav-list {
+  color: var(--text-color2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: auto;
+  justify-items: center;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -90,14 +100,7 @@ li {
   text-align: canter;
 
 }
-.nav-list {
-  color: var(--text-color2);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-right: auto;
-  justify-items: center;
-}
+
 .home{
   color: var(--text-color2);
   display: flex;
