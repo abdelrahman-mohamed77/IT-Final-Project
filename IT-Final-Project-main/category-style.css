@@ -33,11 +33,30 @@
     var(--helper-color-1)
   );
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/*header*/
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
 #active {
   border-bottom: 2px solid white;
   border-width: fit-content;
@@ -133,6 +152,35 @@
 #faq-link:hover {
   color: var(--text-color3);
   opacity: 0.8;
+}
+
+/*theme button*/
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border: 50%;
+  border-radius: 100px;
+  background-color: var(--helper-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 20px;
+  flex-shrink: 0;
+}
+#theme-switch img {
+  fill: var(--background-color);
+}
+#theme-switch img:last-child {
+  display: none;
+}
+.dark-mod #theme-switch img:first-child {
+  display: none;
+}
+.dark-mod #theme-switch img:last-child {
+  display: block;
 }
 
 /* category section */
@@ -273,7 +321,6 @@
   cursor: pointer;
   font-family: inherit;
 }
-
 
 .add-to-cart-btn:hover {
   background-color: var(--text-color3);
