@@ -564,3 +564,59 @@ footer {
 .copyright {
   text-align: center;
 }
+/* الخلفية + البلور */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* الفورم الصغيرة */
+.popup-form {
+  background: var(--cart-background-color);
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  color: var(--text-color2);
+}
+
+.popup-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popup-buttons button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 45%;
+}
+
+#confirmOrder {
+  background: green;
+  color: white;
+}
+
+#closeForm {
+  background: red;
+  color: white;
+}
