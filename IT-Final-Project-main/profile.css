@@ -391,10 +391,45 @@ footer {
   cursor: pointer;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
+/* social icons */
+.social-icons div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+  background-color: transparent;
 }
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: rgb(0, 0, 0);
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  transform: translateY(-3px);
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+}
+
 .social-circle {
   width: 40px;
   height: 40px;
@@ -411,10 +446,6 @@ footer {
   border: 0;
   border-bottom: 1px solid var(--text-muted-2);
   margin: 20px auto;
-}
-
-.copyright {
-  text-align: center;
 }
 /* زرار ال dark mode*/
 /*theme button*/
