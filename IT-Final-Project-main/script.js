@@ -659,4 +659,14 @@ sizes.forEach((item) => {
 // xsizeLCick.addEventListener("click", (event) => {
 //   event.classList.toggle("rd");
 // });
+const openBtn = document.getElementById("openForm");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("closeForm");
 
+openBtn.addEventListener("click", () => {
+  overlay.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
