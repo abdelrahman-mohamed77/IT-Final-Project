@@ -659,16 +659,4 @@ sizes.forEach((item) => {
 // xsizeLCick.addEventListener("click", (event) => {
 //   event.classList.toggle("rd");
 // });
-<div class="overlay" id="overlay">
-      <div class="popup-form">
-        <h3>Complete Your Order</h3>
 
-        <input type="text" placeholder="Phone Number" />
-        <input type="text" placeholder="Address" />
-
-        <div class="popup-buttons">
-          <button id="confirmOrder">Confirm</button>
-          <button id="closeForm">Cancel</button>
-        </div>
-      </div>
-    </div>
