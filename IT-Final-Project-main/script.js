@@ -660,3 +660,46 @@ sizes.forEach((item) => {
 //   event.classList.toggle("rd");
 // });
 
+
+const openBtn = document.getElementById("openForm");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("closeForm");
+
+if (openBtn && overlay && closeBtn) {
+  openBtn.addEventListener("click", () => {
+    overlay.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+}
+const confirmBtn = document.getElementById("confirmOrder");
+
+
+document.getElementById('confirmOrder').addEventListener('click', function() {
+    const phone = document.getElementById('phoneInput').value;
+    const address = document.getElementById('addressInput').value;
+
+    if (phone && address) {
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("address", address);
+
+        // مسح الكارت
+        localStorage.removeItem("cityguys-cart");
+      
+        renderCart();
+        updateCartCount();
+
+        // قفل الفورم
+        document.getElementById('overlay').style.display = "none";
+
+        // رسالة الشكر
+        const msg = document.getElementById("thankMsg");
+        msg.style.display = "block";
+
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 3000);
+    }
+});
