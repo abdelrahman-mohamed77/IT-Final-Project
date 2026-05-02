@@ -665,3 +665,49 @@ sizes.forEach((item) => {
 // });
 
 
+const checkoutBtn = document.querySelector(".checkout-btn");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("close-btn");
+const submitBtn = document.getElementById("submit-btn");
+
+
+checkoutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  overlay.style.display = "flex";
+});
+
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+submitBtn.addEventListener("click", () => {
+  const phone = document.querySelector(".checkout-form input").value.trim();
+  const address = document.querySelector(".checkout-form textarea").value.trim();
+
+  if (phone !== "" && address !== "") {
+    overlay.style.display = "none";
+
+    // تخزين البيانات في localStorage
+    localStorage.setItem("userPhone", phone);
+    localStorage.setItem("userAddress", address);
+
+    // تفريغ الكارت
+    localStorage.removeItem("cityguys-cart");
+    renderCart();
+    updateCartCount();
+
+    // رسالة الشكر
+    const popup = document.createElement("div");
+    popup.className = "thank-popup";
+    popup.textContent = "thank you for your shopping";
+    document.body.appendChild(popup);
+
+    setTimeout(() => popup.classList.add("show"), 100);
+    setTimeout(() => {
+      popup.classList.remove("show");
+      setTimeout(() => popup.remove(), 300);
+    }, 3000);
+  }
+});
+
