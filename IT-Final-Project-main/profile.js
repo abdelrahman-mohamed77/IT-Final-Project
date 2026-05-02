@@ -79,3 +79,25 @@ document.querySelector(".username").innerText = localStorage.getItem("username")
 document.querySelector(".user-email").innerText =localStorage.getItem("email");
 document.querySelector(".user-password").innerText =localStorage.getItem("password");
 
+// ربط ال profile ب فورم العنوان ورقم التليفون
+const phone = localStorage.getItem("phone");
+const address = localStorage.getItem("address");
+
+const phoneEl = document.getElementById("phoneInput");
+const addressEl = document.getElementById("addressInput");
+
+if (phoneEl) phoneEl.textContent = phone || "Not set";
+if (addressEl) addressEl.textContent = address || "Not set";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const phone = localStorage.getItem("phone");
+  const address = localStorage.getItem("address");
+
+  const phoneEl = document.getElementById("phoneInput");
+  const addressEl = document.getElementById("addressInput");
+
+  console.log(phoneEl, addressEl); 
+
+  if (phoneEl) phoneEl.textContent = phone;
+  if (addressEl) addressEl.textContent = address;
+});
