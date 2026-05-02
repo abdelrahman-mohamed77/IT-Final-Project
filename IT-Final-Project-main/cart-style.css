@@ -564,3 +564,97 @@ footer {
 .copyright {
   text-align: center;
 }
+
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.checkout-form {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 40px;
+  border-radius: 20px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: popUp 0.4s ease;
+}
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+  color: var(--helper-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.checkout-form input, .checkout-form textarea {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.checkout-form input:focus, .checkout-form textarea:focus {
+  border-color: var(--text-color3);
+  box-shadow: 0 0 8px var(--text-color3);
+  outline: none;
+}
+
+.checkout-form button {
+  background: var(--helper-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.checkout-form button:hover {
+  background: var(--text-color3);
+  transform: scale(1.05);
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/*رسالة الشكر*/
+.thank-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  color: var(--helper-color);
+  padding: 30px 50px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 2000;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.thank-popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
