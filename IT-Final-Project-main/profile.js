@@ -78,3 +78,6 @@ function togglePassword() {
 document.querySelector(".username").innerText = localStorage.getItem("username");
 document.querySelector(".user-email").innerText =localStorage.getItem("email");
 document.getElementById("password").innerText = localStorage.getItem("password");
+
+document.querySelector(".user-phone").innerText = localStorage.getItem("userPhone");
+document.querySelector(".user-address").innerText = localStorage.getItem("userAddress");
