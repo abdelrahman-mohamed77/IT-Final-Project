@@ -609,16 +609,20 @@ const id = params.get("id");
 // دا بيبحث عن الايدي لو لقي الايدي في الاراي بيرجع الاوبجكت فيه المعلومات بتاعت العنصر
 const product = products.find((p) => p.id === id);
 // نعرض البيانات
-xname.textContent = product.name;
-xprice.textContent = product.price;
-xdescription.textContent = product.description;
-xproductImage.src = product.img;
+if (product) {
+  xname.textContent = product.name;
+  xprice.textContent = product.price;
+  xdescription.textContent = product.description;
+  xproductImage.src = product.img;
+}
 //!------------------Putting Size----------------------------------
 const sizesContainer = document.getElementById("sizes");
 
-product.size.forEach((size) => {
-  sizesContainer.innerHTML += `<p class="sizeClick" ">${size}</p>`;
-});
+if (product && product.size) {
+  product.size.forEach((size) => {
+    sizesContainer.innerHTML += `<p class="sizeClick">${size}</p>`;
+  });
+}
 
 //!Quantity Counter
 let x = null;
