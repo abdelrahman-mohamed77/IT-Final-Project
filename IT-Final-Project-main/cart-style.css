@@ -115,7 +115,7 @@ li {
 .icons {
   display: flex;
   align-items: center;
-  gap: 3vw;
+  gap: 2vw;
   flex: 1;
   margin-right: 4vw;
 }
