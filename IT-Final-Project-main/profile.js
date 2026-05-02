@@ -77,7 +77,7 @@ function togglePassword() {
 // عرض ال username & email & password
 document.querySelector(".username").innerText = localStorage.getItem("username");
 document.querySelector(".user-email").innerText =localStorage.getItem("email");
-document.querySelector(".user-password").innerText =localStorage.getItem("password");
+document.getElementById("password").innerText = localStorage.getItem("password");
 
 // ربط ال profile ب فورم العنوان ورقم التليفون
 const phone = localStorage.getItem("phone");
