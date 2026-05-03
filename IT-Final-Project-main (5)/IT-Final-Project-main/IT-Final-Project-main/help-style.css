@@ -96,7 +96,7 @@ li {
   align-items: center;
   margin-right: auto;
   justify-items: center;
-  margin-right: 8vw;
+  margin-right: 16vw;
 }
 .list-item {
   padding: 2rem;
@@ -115,7 +115,8 @@ li {
   align-items: center;
   gap: 2vw;
   flex: 1;
-  margin-right: 4vw;
+  margin-right: 0; 
+  justify-content: flex-end; 
 }
 .icons svg {
   fill: var(--text-color2) !important;
@@ -151,15 +152,14 @@ li {
   opacity: 0.8;
 }
 
-/* theme button */
-
+/*theme button*/
 #theme-switch {
   height: 50px;
   width: 50px;
   padding: 0;
   border: 50%;
   border-radius: 100px;
-  background-color: var(--hover-color);
+  background-color: var(--helper-color);
   cursor: pointer;
   display: flex;
   justify-content: center;

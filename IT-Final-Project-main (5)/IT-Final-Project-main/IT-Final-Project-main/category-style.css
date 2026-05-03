@@ -64,15 +64,12 @@ li {
 .nav-bar {
   background-color: var(--headr-bar-color);
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   width: 90%;
-  margin-left: 5%;
+  margin: 15px auto 0; 
   border-radius: 15px;
-  margin-top: 15px;
   background-image: var(--nav-color);
-  justify-content: space-between;
-  gap: 8vw;
+  justify-content: space-between; 
   padding: 0 2rem;
 }
 .logo {
@@ -99,7 +96,7 @@ li {
   align-items: center;
   margin-right: auto;
   justify-items: center;
-  margin-right: 8vw;
+  margin-right: 5vw;
 }
 .list-item {
   padding: 2rem;
@@ -118,7 +115,8 @@ li {
   align-items: center;
   gap: 2vw;
   flex: 1;
-  margin-right: 4vw;
+  justify-content: flex-end; 
+  margin-right: 0;
 }
 .icons svg {
   fill: var(--text-color2) !important;
@@ -421,4 +419,38 @@ li {
   .social-circle:hover svg {
     fill: white;
   }
+}
+/*discount*/
+.price-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+
+.current-price {
+  color: var(--text-color3) !important; 
+  font-size: 1.2rem;
+}
+
+
+.original-price {
+  color: var(--text-color4);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff1010; 
+    color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 5;
+  font-size: 0.8rem;
 }

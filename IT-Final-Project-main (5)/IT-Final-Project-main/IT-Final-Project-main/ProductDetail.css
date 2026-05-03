@@ -509,3 +509,13 @@ footer {
 .copyright {
   text-align: center;
 }
+/*discount bandage*/
+.discount-badge {
+ width: 8%;
+  background-color: #ff1010; 
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
