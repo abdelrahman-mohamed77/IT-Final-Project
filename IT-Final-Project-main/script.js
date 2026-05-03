@@ -609,16 +609,20 @@ const id = params.get("id");
 // دا بيبحث عن الايدي لو لقي الايدي في الاراي بيرجع الاوبجكت فيه المعلومات بتاعت العنصر
 const product = products.find((p) => p.id === id);
 // نعرض البيانات
-xname.textContent = product.name;
-xprice.textContent = product.price;
-xdescription.textContent = product.description;
-xproductImage.src = product.img;
+if (product) {
+  xname.textContent = product.name;
+  xprice.textContent = product.price;
+  xdescription.textContent = product.description;
+  xproductImage.src = product.img;
+}
 //!------------------Putting Size----------------------------------
 const sizesContainer = document.getElementById("sizes");
 
-product.size.forEach((size) => {
-  sizesContainer.innerHTML += `<p class="sizeClick" ">${size}</p>`;
-});
+if (product && product.size) {
+  product.size.forEach((size) => {
+    sizesContainer.innerHTML += `<p class="sizeClick">${size}</p>`;
+  });
+}
 
 //!Quantity Counter
 let x = null;
@@ -659,3 +663,51 @@ sizes.forEach((item) => {
 // xsizeLCick.addEventListener("click", (event) => {
 //   event.classList.toggle("rd");
 // });
+
+
+const checkoutBtn = document.querySelector(".checkout-btn");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("close-btn");
+const submitBtn = document.getElementById("submit-btn");
+
+
+checkoutBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  overlay.style.display = "flex";
+});
+
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+submitBtn.addEventListener("click", () => {
+  const phone = document.querySelector(".checkout-form input").value.trim();
+  const address = document.querySelector(".checkout-form textarea").value.trim();
+
+  if (phone !== "" && address !== "") {
+    overlay.style.display = "none";
+
+    // تخزين البيانات في localStorage
+    localStorage.setItem("userPhone", phone);
+    localStorage.setItem("userAddress", address);
+
+    // تفريغ الكارت
+    localStorage.removeItem("cityguys-cart");
+    renderCart();
+    updateCartCount();
+
+    // رسالة الشكر
+    const popup = document.createElement("div");
+    popup.className = "thank-popup";
+    popup.textContent = "thank you for your shopping";
+    document.body.appendChild(popup);
+
+    setTimeout(() => popup.classList.add("show"), 100);
+    setTimeout(() => {
+      popup.classList.remove("show");
+      setTimeout(() => popup.remove(), 300);
+    }, 3000);
+  }
+});
+
