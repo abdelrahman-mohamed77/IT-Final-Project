@@ -122,20 +122,21 @@ li {
   color: var(--text-color1);
 }
 .icons {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-    flex: 1;
-    margin-right: 4vw;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  flex: 1;
+  margin-right: 4vw;
 }
 .icons svg{
-   fill: #edf2f4;
-    transition: all 0.5s ;
+  fill: #edf2f4;
+  transition: all 0.5s ;
 
 }
 .icons svg:hover{
-    transition: 0.5s;
-    fill: #000000; 
+  transition: 0.5s;
+  transform: translateY(-4px);
+  fill: #083a18; 
 }
 .icons a {
     text-decoration: none;
