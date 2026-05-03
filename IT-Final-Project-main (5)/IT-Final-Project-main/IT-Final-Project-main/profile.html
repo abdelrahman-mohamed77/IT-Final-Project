@@ -30,7 +30,6 @@
         </div>
 
         <div class="icons">
-
           <a href="#" class="cart"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,58 +100,65 @@
     </nav>
     <!-- end navbar -->
 
-    <div class="intro">
-      <h1>Welcome to City Guys</h1>
-      <p>Your style, your identity</p>
-    </div>
+    <!-- Main Profile Section -->
+    <main class="profile-container">
+      <div class="intro">
+        <h1>Welcome to City Guys</h1>
+        <p>Your style, your identity</p>
+      </div>
 
-    <!-- card -->
-    <div class="container">
       <div class="card">
-        <h1 class="card-title">Profile</h1>
+        <h1 class="card-title">My Profile</h1>
 
-        <!-- informations -->
         <div class="content">
+          <!-- Info Details Left -->
           <div class="info">
             <p>
-              <i class="fa-solid fa-envelope"></i>Email:
-              <span class="user-email"></span>
+              <i class="fa-solid fa-envelope"></i>
+              <strong>Email:</strong>
+              <span class="user-email">user@example.com</span>
             </p>
-           <p>
-              <i class="fa-solid fa-phone"></i>Phone:
-              <span class="user-phone"></span>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <strong>Phone:</strong>
+              <span class="user-phone">+20 10 1234 5678</span>
             </p>
-           <p>
-              <i class="fa-solid fa-location-dot"></i>Address:
-              <span  class="user-address"></span>
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              <strong>Address:</strong>
+              <span class="user-address">Helwan, Cairo, Egypt</span>
             </p>
-           <p>
-              <i class="fa-solid fa-box"></i>Last Order: It is being shipped
+            <p>
+              <i class="fa-solid fa-box"></i>
+              <strong>Last Order:</strong>
+              <span>It is being shipped</span>
             </p>
             <p>
               <i class="fa-solid fa-eye"></i>
-              Password:
+              <strong>Password:</strong>
               <span id="password">********</span>
               <button onclick="togglePassword()" id="show-hide">Show</button>
             </p>
           </div>
 
-          <!-- جزء الصورة اليمين -->
+          <!-- Avatar Right -->
           <div class="profile">
             <div class="photo">
               <i class="fa-solid fa-user"></i>
             </div>
-            <p class="username">User Name</p>
+            <p class="username">John Doe</p>
           </div>
         </div>
 
-        <!-- continue shopping -->
-        <a href="category.html" class="continue-btn">
-          <i class="fa-solid fa-cart-shopping"></i>
-          Continue Shopping
-        </a>
+        <!-- Actions -->
+        <div class="button-container">
+          <a href="category.html" class="continue-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Continue Shopping
+          </a>
+        </div>
       </div>
-    </div>
+    </main>
 
     <!-- footer -->
     <footer>
@@ -253,7 +259,7 @@
       </p>
     </footer>
     <!-- end footer -->
-     <!-- زرار ال scroll -->
+    <!-- زرار ال scroll -->
     <button id="up">⬆</button>
   </body>
 </html>

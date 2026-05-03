@@ -666,7 +666,6 @@ sizes.forEach((item) => {
 //   event.classList.toggle("rd");
 // });
 
-
 const checkoutBtn = document.querySelector(".checkout-btn");
 const overlay = document.getElementById("overlay");
 const closeBtn = document.getElementById("close-btn");
@@ -688,7 +687,9 @@ if (closeBtn) {
 if (submitBtn) {
   submitBtn.addEventListener("click", () => {
     const phone = document.querySelector(".checkout-form input").value.trim();
-    const address = document.querySelector(".checkout-form textarea").value.trim();
+    const address = document
+      .querySelector(".checkout-form textarea")
+      .value.trim();
 
     if (phone !== "" && address !== "") {
       overlay.style.display = "none";
@@ -716,4 +717,3 @@ if (submitBtn) {
     }
   });
 }
-
