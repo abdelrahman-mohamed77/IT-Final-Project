@@ -27,16 +27,6 @@ const btn = document.querySelector(".continue-btn");
 btn.onclick = function() {
   btn.style.background = "black";
 };
-// تكبير ال card
-const card = document.querySelector(".card");
-
-card.onmouseover = function() {
-  card.style.transform = "scale(1.05)";
-};
-// ترجع لحجمها الطبيعي
-card.onmouseout = function() {
-  card.style.transform = "scale(1)";
-};
 
 // زرار ال scroll
 const topBtn = document.getElementById("up");
