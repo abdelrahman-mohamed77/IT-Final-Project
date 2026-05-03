@@ -21,7 +21,7 @@ themeSwitch.addEventListener("click", () => {
   }
 });
 
-//تغيير الزرار للون الاسود
+//تغيير زرار ال continue-btn للون الاسود
 const btn = document.querySelector(".continue-btn");
 
 btn.onclick = function() {
