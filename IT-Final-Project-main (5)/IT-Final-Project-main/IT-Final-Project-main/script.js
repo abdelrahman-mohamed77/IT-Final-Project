@@ -717,3 +717,20 @@ if (submitBtn) {
     }
   });
 }
+
+const topBtn = document.getElementById("up");
+topBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
+// يظهر ويختفي
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
