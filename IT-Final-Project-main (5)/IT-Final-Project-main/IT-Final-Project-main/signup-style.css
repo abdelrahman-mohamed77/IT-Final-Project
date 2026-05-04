@@ -30,13 +30,118 @@
     var(--helper-color),
     var(--headr-bar-color),
     var(--helper-color-1)
-  );
-}
-* {
-  padding: 0;
-  margin: 0;
-}
-
+    );
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  li {
+    list-style: none;
+  }
+  
+  #active {
+    border-bottom: 2px solid white;
+    border-width: fit-content;
+  }
+  .nav-bar {
+    background-color: var(--headr-bar-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    margin-top: 15px;
+    background-image: var(--nav-color);
+    justify-content: space-between;
+    gap: 8vw;
+    padding: 0 2rem;
+  }
+  .logo {
+    padding: 1.1rem;
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--text-color2);
+    justify-items: flex-start;
+    flex: 1;
+    text-align: canter;
+  }
+  .nav-list {
+    color: var(--text-color2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: auto;
+    justify-items: center;
+  }
+  .home {
+    color: var(--text-color2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: auto;
+    justify-items: center;
+    margin-right: 16vw;
+  }
+  .list-item {
+    padding: 2rem;
+    font-size: large;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.5s ease;
+  }
+  
+  .list-item:hover {
+    transform: translateY(-4px);
+    color: var(--text-color3);
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    flex: 1;
+    margin-right: 4vw;
+  }
+  .icons svg {
+    fill: var(--text-color2) !important;
+    transition: all 0.5s;
+    display: flex;
+    justify-content: flex-end;
+    width: 24px;
+    height: 24px;
+  }
+  .icons svg:hover {
+    transition: 0.5s;
+    transform: translateY(-4px);
+    fill: var(--text-color3) !important;
+  }
+  .icons a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+  #faq-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.3s;
+  }
+  
+  #faq-link:hover {
+    color: var(--text-color3);
+    opacity: 0.8;
+  }
 body {
   background-color: var(--background-color);
   font-family: "Segoe UI", Tahoma, sans-serif;
@@ -220,109 +325,4 @@ p {
   min-height: 18px;
   margin-top: 10px;
   font-weight: bold;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-li {
-  list-style: none;
-}
-
-#active {
-  border-bottom: 2px solid white;
-  border-width: fit-content;
-}
-.nav-bar {
-  background-color: var(--headr-bar-color);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  border-radius: 15px;
-  margin-top: 15px;
-  background-image: var(--nav-color);
-  justify-content: space-between;
-  gap: 8vw;
-  padding: 0 2rem;
-}
-.logo {
-  padding: 1.1rem;
-  font-size: 32px;
-  font-weight: bolder;
-  color: var(--text-color2);
-  justify-items: flex-start;
-  flex: 1;
-  text-align: canter;
-}
-.nav-list {
-  color: var(--text-color2);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-right: auto;
-  justify-items: center;
-}
-.home {
-  color: var(--text-color2);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-right: auto;
-  justify-items: center;
-  margin-right: 16vw;
-}
-.list-item {
-  padding: 2rem;
-  font-size: large;
-  font-weight: bold;
-  display: inline-block;
-  transition: all 0.5s ease;
-}
-
-.list-item:hover {
-  transform: translateY(-4px);
-  color: var(--text-color3);
-}
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 2vw;
-  flex: 1;
-  margin-right: 4vw;
-}
-.icons svg {
-  fill: var(--text-color2) !important;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: flex-end;
-  width: 24px;
-  height: 24px;
-}
-.icons svg:hover {
-  transition: 0.5s;
-  transform: translateY(-4px);
-  fill: var(--text-color3) !important;
-}
-.icons a {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-}
-#faq-link {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  transition: 0.3s;
-}
-
-#faq-link:hover {
-  color: var(--text-color3);
-  opacity: 0.8;
 }

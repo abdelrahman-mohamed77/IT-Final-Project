@@ -37,7 +37,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/*header*/
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   background-color: var(--background-color);
@@ -166,6 +166,7 @@ li {
   align-items: center;
   top: 10px;
   right: 20px;
+  margin: 0;
   flex-shrink: 0;
 }
 #theme-switch img {
@@ -180,7 +181,6 @@ li {
 .dark-mod #theme-switch img:last-child {
   display: block;
 }
-
 /* PROFILE STYLES */
 .intro {
   text-align: center;

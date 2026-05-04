@@ -37,6 +37,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*header*/
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   background-color: var(--background-color);
@@ -115,8 +116,7 @@ li {
   align-items: center;
   gap: 2vw;
   flex: 1;
-  margin-right: 0; 
-  justify-content: flex-end; 
+  margin-right: 4vw;
 }
 .icons svg {
   fill: var(--text-color2) !important;
@@ -166,6 +166,7 @@ li {
   align-items: center;
   top: 10px;
   right: 20px;
+  margin: 0;
   flex-shrink: 0;
 }
 #theme-switch img {
@@ -180,7 +181,6 @@ li {
 .dark-mod #theme-switch img:last-child {
   display: block;
 }
-
 /* Contact Form*/
 
 .contact-form-section {
