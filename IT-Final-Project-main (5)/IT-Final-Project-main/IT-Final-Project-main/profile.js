@@ -21,20 +21,11 @@ themeSwitch.addEventListener("click", () => {
   }
 });
 
-//تغيير الزرار للون الاسود
+//تغيير زرار ال continue-btn للون الاسود
 const btn = document.querySelector(".continue-btn");
 
 btn.onclick = function() {
   btn.style.background = "black";
-};
-const card = document.querySelector(".card");
-
-card.onmouseover = function() {
-  card.style.transform = "scale(1.05)";
-};
-
-card.onmouseout = function() {
-  card.style.transform = "scale(1)";
 };
 
 // زرار ال scroll

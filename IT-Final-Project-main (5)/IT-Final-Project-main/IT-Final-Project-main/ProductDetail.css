@@ -519,3 +519,19 @@ footer {
   font-weight: bold;
   font-size: 0.8rem;
 }
+#up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: var(--headr-bar-color);
+  color: white;
+  display: none;
+}
+
+#up.show {
+  display: block;
+}
