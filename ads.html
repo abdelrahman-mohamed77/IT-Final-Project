@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Guys Ad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background: linear-gradient(to right, #1a1008 , #3b2510 , #62461c , #8a6530 );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-wrapper {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            height: 80%;
+            gap: 32px;
+        }
+
+        .ad-image-side {
+            height: 100%;
+            display: flex;
+            border-radius: 50px;
+        }
+
+        .ad-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 50px;
+        }
+        .ad-divider {
+            width: 1px;
+            height: 70%;
+            flex-shrink: 0;
+            background-color: #000000;
+        }
+        .ad-text-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+            padding-right: 8px;
+        }
+
+        .ad-a {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .ad-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .ad-badge-pill {
+            background: linear-gradient(135deg, #daaf50, #a07828);
+            color: #1a1008;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 100px;
+            text-decoration: none;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="ad-wrapper">
+
+        <div class="ad-image-side">
+            <img src="image/adss.png" alt="City Guys Collection">
+        </div>
+
+        <div class="ad-divider"></div>
+
+        <div class="ad-text-side">
+            <p class="ad-a">make your dreams fly · 2026</p>
+            <div class="ad-badge">
+                <a href="https://badrvoid.github.io/FlyProject/" target="_blank" class="ad-badge-pill">GET YOUR TICKET Now</a>
+                <span class="ad-badge-line"></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
