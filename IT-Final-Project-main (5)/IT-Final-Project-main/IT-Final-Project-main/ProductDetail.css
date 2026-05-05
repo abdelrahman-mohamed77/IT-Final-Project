@@ -330,6 +330,25 @@ button {
 .cart button:hover {
   background-color: var(--text-color3);
 }
+/*the note */
+.cart-note {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--headr-bar-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 10;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.cart-note.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* !Related Items */
 .related {
