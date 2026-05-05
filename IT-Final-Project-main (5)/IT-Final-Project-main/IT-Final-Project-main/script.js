@@ -625,6 +625,8 @@ if (product && product.size && sizesContainer) {
     sizesContainer.innerHTML += `<p class="sizeClick">${size}</p>`;
   });
 }
+const addToCartBtn = document.querySelector(".addtocartbtn");
+
 if (addToCartBtn && product) {
   addToCartBtn.addEventListener("click", () => {
     addToCart(
