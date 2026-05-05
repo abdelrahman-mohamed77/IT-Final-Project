@@ -625,6 +625,31 @@ if (product && product.size && sizesContainer) {
     sizesContainer.innerHTML += `<p class="sizeClick">${size}</p>`;
   });
 }
+if (addToCartBtn && product) {
+  addToCartBtn.addEventListener("click", () => {
+    addToCart(
+      product.name,
+      product.price.replace("$", ""), // نشيل علامة الدولار
+      product.img,
+      product.category // أو brand لو عايز
+    );
+  });
+}
+//show the note tap
+function shownote(message) {
+  const oldnote = document.querySelector(".cart-note");
+  const note = document.createElement("div");
+  note.className = "cart-note";
+  note.textContent = message;
+  document.body.appendChild(note);
+  setTimeout(() => note.classList.add("show"));
+
+  //delete it after 2.5s
+  setTimeout(() => {
+    note.classList.remove("show");
+    setTimeout(() => note.remove(), 100);
+  }, 2500);
+}
 
 //!Quantity Counter
 let x = null;
